@@ -1,6 +1,6 @@
 #include <stdio.h>
 /**
- * maain - Prints the first 98 fibonacci mummbers, starting with
+ * main - Prints the first 98 fibonacci mummbers, starting with
  * 1 and 2, separated by a coma followed by a space.
  * Return: Always 0.
  */
@@ -8,7 +8,7 @@
 int main(void)
 {
 	int count;
-	unsigned long fib1 = 0, fib2 =1, sum
+	unsigned long fib1 = 0, fib2 = 1, sum
 	unsigned long fib1_half1, fib1_half2, fib2_half1 fib2_half2;
 
 	for (count = 0; count < 92; count++)
@@ -18,7 +18,7 @@ int main(void)
 	fib1 = fib2;
 	fib2 = sum;
 	}
-	fib1-half1 = fib1 / 10000000000;
+	fib1_half1 = fib1 / 10000000000;
 	fib2_half1 = fib2 / 10000000000;
 	fib1_half2 = fib1 % 10000000000;
 	fib2_half2 = fib2 % 10000000000;
@@ -35,7 +35,7 @@ int main(void)
 	if (count != 98)
 	printf(",");
 	fib1_half1 = fib2_half1;
-	fib1_half2 =fib2_half2;
+	fib1_half2 = fib2_half2;
 	fib2_half1 = half1;
 	fib2_half2 = half2;
 	}
