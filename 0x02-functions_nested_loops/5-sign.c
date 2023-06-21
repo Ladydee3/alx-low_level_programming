@@ -3,8 +3,8 @@
 /**
  * prints_sign - Print the sign of a number
  * @n: The number to be checked
- * Return: 1 for positive number, 1 for negative number or zero for something else
- *:wq/
+ * Return: 1 for positive number, -1 for negative number or zero for something else
+ */
 
 int print_sign(int n)
 
