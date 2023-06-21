@@ -6,9 +6,7 @@
  * @n: The number to be checked
  * Return: 1 for positive number, -1 for negative number or zero for something else
  */
-
 int print_sign(int n)
-
 {
 	if (n > 0)
 	{
