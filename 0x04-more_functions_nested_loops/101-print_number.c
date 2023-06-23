@@ -4,10 +4,10 @@
 /**
  * print_number - Print an integer.
  * @n: The integer to print.
- *Return : Nothing!
+ *Return: Nothing!
  */
 
-void ptint_number(int n)
+void print_number(int n)
 {
 	unsigned int k = n;
 
