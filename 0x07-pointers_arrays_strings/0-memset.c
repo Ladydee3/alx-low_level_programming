@@ -4,8 +4,10 @@
  * _memset - Entry point
  * @s: pointed destination
  * @b: constant bytye
+ * @n: bytes
  *  Return: Always 0 (success)
  */
+
 char *_memset(char *s, char b, unsigned int n)
 {
 	unsigned int i;
