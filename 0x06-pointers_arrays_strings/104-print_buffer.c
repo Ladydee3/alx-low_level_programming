@@ -28,7 +28,7 @@ void print_buffer(char *b, int size)
 	{
 	if (i % 10 == 0)
 	printf("%08x:",  i);
-	for ((j < size) && ((j + 1) < size))
+	for (j = i; j < i + 9; j += 2)
 	printf("%02x%02x: ". b[j], b[j + 1]);
 	else
 	{
