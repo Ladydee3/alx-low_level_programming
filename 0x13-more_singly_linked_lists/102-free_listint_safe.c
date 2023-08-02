@@ -1,39 +1,40 @@
 #include "lists.h"
 
 /**
- * main - main point
+ * looped_listint_len1 - counts unique nodes in looped
  * @head: Pointer to the head of the list.
  *
  * Return: The number of nodes in the list.
  */
 size_t looped_listint_len1(const listint_t *head)
 {
-    const listint_t *slow, *fast;
-    size_t node_count = 0;
+const listint_t *slow, *fast;
+size_t node_count = 0;
 
-    if (head == NULL)
-        return (0);
+if (head == NULL)
+return (0);
 
-    slow = head;
-    fast = head;
+slow = head;
+fast = head;
 
-    while (fast != NULL && fast->next != NULL)
-    {
-        slow = slow->next;
-        fast = fast->next->next;
-        if (slow == fast)
-        {
-            do
-            {
-                node_count++;
-                slow = slow->next;
-            } while (slow != fast);
+while (fast != NULL && fast->next != NULL)
+{
+slow = slow->next;
+fast = fast->next->next;
+if (slow == fast)
+{
+do
 
-            return (node_count);
-        }
-    }
+{
+node_count++;
+slow = slow->next;
+} while (slow != fast);
 
-    return (0);
+return (node_count);
+}
+}
+
+return (0);
 }
 
 /**
@@ -44,25 +45,24 @@ size_t looped_listint_len1(const listint_t *head)
  */
 size_t free_listint_safe(listint_t **head)
 {
-    size_t node_count = 0;
-    listint_t *current, *next;
+size_t node_count = 0;
+listint_t *current, *next;
 
-    if (head == NULL || *head == NULL)
-        return (0);
+if (head == NULL || *head == NULL)
+return (0);
 
-    node_count = looped_listint_len(*head);
+node_count = looped_listint_len(*head);
+current = *head;
 
-    current = *head;
+while (node_count > 0)
+{
+next = current->next;
+free(current);
+current = next;
+node_count--;
+}
 
-    while (node_count > 0)
-    {
-        next = current->next;
-        free(current);
-        current = next;
-        node_count--;
-    }
-
-    *head = NULL;
-    return (node_count);
+*head = NULL;
+return (node_count);
 }
 
