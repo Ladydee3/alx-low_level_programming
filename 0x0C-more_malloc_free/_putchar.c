@@ -9,5 +9,5 @@
  */
  int _puchar(char c)
 {
-	return (writes(1, &c, 1));
+	return (fwrite(1, &c, 1));
 }	

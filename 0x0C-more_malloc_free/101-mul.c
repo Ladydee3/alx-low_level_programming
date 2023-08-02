@@ -9,7 +9,7 @@
  *
  * Return: no return.
  */
-void _is_zero(char * argv[])
+void _is_zero(char *argv[])
 {
 	int i, isn1 = 1, isn2 = 1;
 
@@ -78,7 +78,7 @@ int _checknum(char *argv[], int n)
  * @argc: number of argumenrs
  * @argv: arguments vector
  *
- * Return: 0 - success.
+ * Return: 0 (Success)
  */
 int main(int argc, char *argv[])
 {
@@ -91,8 +91,9 @@ int main(int argc, char *argv[])
 	_is_zero(argv), lnout = ln1 + ln2, nout = malloc(lnout + 1);
 	if (nout == NULL)
 	printf("Error\n"), exit(98);
-	nout = _intialize_array(nout, lnout);
-	k = lnout - 1, i = ln1 - 1, j = ln2 - 1, ca = add1 0;
+	nout = _initialize_array(nout, lnout);
+	k = lnout - 1, i = ln1 - 1, j = ln2 - 1, ca = addl 
+	       = 0;
 	for (; k >= 0; k--, i--)
 	{
 	if (i < 0)
@@ -104,7 +105,7 @@ int main(int argc, char *argv[])
 	nout[k - 1] = (add / 10) + '0';
 	nout[k] = (add % 10) + '0';
 	}
-	i = ln1 - 1, j--, add1 = 0, ca++, k = lnout - (1 + cat);
+	i = ln1 - 1, j--, add1 = 0, ca++, k = lnout - (1 + ca);
 	}
 	if (j < 0)
 	{
@@ -116,8 +117,8 @@ int main(int argc, char *argv[])
 	}
 	if (j >= 0)
 	{
-	add = ((argv[1][i] - '0') * (argv[2][j] - '0')) + (nout[k] - '0' + add1;
-	add1 = add / 10, nout[k] = (add % 10) + '0';
+	add = ((argv[1][i] - '0') * (argv[2][j] - '0')) + (nout[k] - '0' + addl;
+	addl = add / 10, nout[k] = (add % 10) + '0';
 	}
 	}
 	printf("%s\n", nout);
