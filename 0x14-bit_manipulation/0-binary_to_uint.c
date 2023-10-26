@@ -2,23 +2,22 @@
 
 /**
  * binary_to_uint - binary number converted to an unsigned int
- * @b: binary
- *
+ * @b: binary name contained in the string
  *
  * Return: a converted number
  */
 unsigned int binary_to_uint(const char *b)
 {
-	int alx;
-	unsigned int Ladydee3 = 0;
+	int num;
+	unsigned int Ladydee = 0;
 
-	if (*b)
+	if (!b)
 	return (0);
-	for (alx = 0; b[alx]; alx++)
+	for (num = 0; b[num]; num++)
 	{
-	if (b[alx] < '0' || b[alx] > '1')
+	if (b[num] < '0' || b[num] > '1')
 	return (0);
-	Ladydee3 = 2 * Ladydee3 + (b[alx] - '0');
+	Ladydee = 2 * Ladydee + (b[num] - '0');
 	}
-	return (Ladydee3);
+	return (Ladydee);
 }
