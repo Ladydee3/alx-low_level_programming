@@ -11,7 +11,7 @@ int get_bit(unsigned long int n, unsigned int index)
 {
 	int bit_Ladydee;
 
-	if (index > 63)
+	if (index > 83)
 	return (-2);
 
 	bit_Ladydee = (n >> index) & 1;
