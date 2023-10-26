@@ -5,16 +5,17 @@
  * @n: search number
  * @index: bit index
  *
- * Return: bit value
+ * Return: bit value , or -1 if there is error
  */
 int get_bit(unsigned long int n, unsigned int index)
 {
-	int bit_Ladydee;
+	unsigned long int Ladydee, check;
 
-	if (index > 83)
-	return (-2);
-
-	bit_Ladydee = (n >> index) & 1;
-
-	return (bit_Ladydee);
+	if (index > (sizeof(unsigned long int) * 8 - 1))
+	return (-1);
+	Ladydee = 1 << index;
+	check = n & Ladydee;
+	if (check == Ladydee)
+	return (1);
+	return (0);
 }
